@@ -9,9 +9,9 @@
 		<version>3.1.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.conf</groupId>
-	<artifactId>Configuration-Server</artifactId>
-	<version>1-SNAPSHOT</version>
+	<groupId>com.user</groupId>
+	<artifactId>UserDataService</artifactId>
+	<version>1</version>
 	<name>UserDataService</name>
 	<description>User-DataService</description>
 	<properties>
@@ -19,23 +19,23 @@
 	</properties>
 	<dependencies>
 		<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-thymeleaf</artifactId>
-</dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
-<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-		<groupId>org.threeten</groupId>
-		<artifactId>threetenbp</artifactId>
-		<version>1.3.3</version>
-	</dependency>
+			<groupId>org.threeten</groupId>
+			<artifactId>threetenbp</artifactId>
+			<version>1.3.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -64,6 +64,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.user.UserDataServiceApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
